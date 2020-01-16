@@ -6,6 +6,7 @@
 
 #快速开始
 1、服务端
+```
 SimpleServer simpleServer = new SimpleServer();
         simpleServer.init(ServerConfigTemplate
                     .builder()
@@ -22,8 +23,9 @@ SimpleServer simpleServer = new SimpleServer();
                         return true;
                      })
                     .build());
-                    
+```             
 2、客户端
+```
 ReconnectionClient reconnectionClient = new ReconnectionClient();
         reconnectionClient.init(ClientConfigTemplate
                 .builder()
@@ -41,3 +43,4 @@ ReconnectionClient reconnectionClient = new ReconnectionClient();
                 }) //处理收到的消息
                 .localService(new ClientLocalService()) ////绑定rpc提供的服务
                 .build());
+```
